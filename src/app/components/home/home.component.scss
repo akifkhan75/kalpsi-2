@@ -1,3 +1,6 @@
+.page-header {
+  margin-bottom: 5px;
+}
 .banner {
   position: relative;
   img {
@@ -7,5 +10,33 @@
     position: absolute;
     top: 5px;
     right: 5px;
+  }
+}
+
+.restaurant {
+  &-header {
+    margin-bottom: 10px;
+    h2 {
+      margin: 0;
+      margin-bottom: 7px;
+    }
+    .rating {
+      display: flex;
+      align-items: center;
+      .mat-icon {
+        margin-right: 5px;
+      }
+    }
+  }
+}
+
+.footer {
+  p {
+    display: flex;
+    justify-content: center;
+    a {
+      text-decoration: none;
+      padding: 3px 5px;
+    }
   }
 }

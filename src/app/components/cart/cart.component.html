@@ -1,0 +1,137 @@
+<div class="card-container">
+  <div class="page-header">
+    <h3>Your Order from 4th Street Pizza</h3>
+  </div>
+  <mat-card>
+    <div class="cart-items">
+      <div class="cart-item">
+        <div>
+          <h4 class="cart-item-title">Egg and Toast</h4>
+          <p class="cart-item-details">Deliciuos egg with toast</p>
+        </div>
+        <div class="cart-item-options">
+          <p class="cart-item-price">750.00</p>
+          <div class="cart-item-counter2">
+            <button
+              *ngIf="isDecrementDisabled == false"
+              color="primary"
+              mat-icon-button
+              (click)="ondecrement()"
+              [disabled]="isDecrementDisabled"
+            >
+              <mat-icon>remove</mat-icon>
+            </button>
+            <button
+              *ngIf="isDecrementDisabled == true"
+              color="primary"
+              mat-icon-button
+              (click)="ondecrement()"
+              [disabled]="isDecrementDisabled"
+            >
+              <mat-icon>delete</mat-icon>
+            </button>
+            <p>{{ cartCounter }}</p>
+            <button mat-icon-button color="primary" (click)="onIncrement()">
+              <mat-icon>add</mat-icon>
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="cart-item">
+        <div>
+          <h4 class="cart-item-title">Egg and Toast</h4>
+          <p class="cart-item-details">Deliciuos egg with toast</p>
+        </div>
+        <div class="cart-item-options">
+          <p class="cart-item-price">750.00</p>
+          <div class="cart-item-counter2">
+            <button
+              *ngIf="isDecrementDisabled == false"
+              color="primary"
+              mat-icon-button
+              (click)="ondecrement()"
+              [disabled]="isDecrementDisabled"
+            >
+              <mat-icon>remove</mat-icon>
+            </button>
+            <button
+              *ngIf="isDecrementDisabled == true"
+              color="primary"
+              mat-icon-button
+              (click)="ondecrement()"
+              [disabled]="isDecrementDisabled"
+            >
+              <mat-icon>delete</mat-icon>
+            </button>
+            <p>{{ cartCounter }}</p>
+            <button mat-icon-button color="primary" (click)="onIncrement()">
+              <mat-icon>add</mat-icon>
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="cart-item">
+        <div>
+          <h4 class="cart-item-title">Egg and Toast</h4>
+          <p class="cart-item-details">Deliciuos egg with toast</p>
+        </div>
+        <div class="cart-item-options">
+          <p class="cart-item-price">750.00</p>
+          <div class="cart-item-counter2">
+            <button
+              *ngIf="isDecrementDisabled == false"
+              color="primary"
+              mat-icon-button
+              (click)="ondecrement()"
+              [disabled]="isDecrementDisabled"
+            >
+              <mat-icon>remove</mat-icon>
+            </button>
+            <button
+              *ngIf="isDecrementDisabled == true"
+              color="primary"
+              mat-icon-button
+              (click)="ondecrement()"
+              [disabled]="isDecrementDisabled"
+            >
+              <mat-icon>delete</mat-icon>
+            </button>
+            <p>{{ cartCounter }}</p>
+            <button mat-icon-button color="primary" (click)="onIncrement()">
+              <mat-icon>add</mat-icon>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <table class="cart-total">
+      <tr>
+        <td>Subtotal</td>
+        <td align="right">2250.00</td>
+      </tr>
+      <tr>
+        <td>Delivery Fee</td>
+        <td align="right">50.00</td>
+      </tr>
+      <tr>
+        <td>GST</td>
+        <td align="right">100.00</td>
+      </tr>
+      <tr>
+        <td>Discount</td>
+        <td align="right">0.00</td>
+      </tr>
+      <tr>
+        <td>
+          <b>Total <i>(Incl. GST)</i></b>
+        </td>
+        <td align="right"><b>2400.00</b></td>
+      </tr>
+    </table>
+  </mat-card>
+</div>
+
+<div class="checkout-option">
+  <button mat-flat-button color="primary">GO TO CHECKOUT</button>
+</div>

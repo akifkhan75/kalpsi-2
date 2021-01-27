@@ -44,9 +44,9 @@ export class CartOptions {
     }
   }
   ondecrement() {
+    this.cartCounter = this.cartCounter - 1;
     if (this.cartCounter > 1) {
       this.isDecrementDisabled = false;
-      this.cartCounter = this.cartCounter - 1;
     } else {
       this.isDecrementDisabled = true;
     }

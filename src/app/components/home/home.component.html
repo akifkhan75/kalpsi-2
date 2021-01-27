@@ -1,43 +1,35 @@
 <div class="card-container">
-  <div class="page-header">
-    <h3>Home</h3>
-    <div class="button-group">
-      <button mat-icon-button><mat-icon>edit</mat-icon></button>
-    </div>
+  <div class="banner">
+    <img
+      src="../../../assets/images/banner.webp"
+      style="width:100%;margin-bottom:20px"
+      alt=""
+    />
   </div>
   <mat-card>
-    <div class="banner">
-      <img
-        src="../../../assets/images/banner.webp"
-        style="width:100%;margin-bottom:20px"
-        alt=""
-      />
-      <button mat-icon-button><mat-icon>camera_alt</mat-icon></button>
+    <div class="restaurant-header">
+      <h2>4th Street Pizza</h2>
+      <div class="rating">
+        <mat-icon color="primary">star</mat-icon>
+        <span><b>3.5</b> / 5.0 (39)</span>
+      </div>
     </div>
-    <mat-form-field appearance="outline">
-      <mat-label>Restaurant Name</mat-label>
-      <input type="text" matInput placeholder="Placeholder" />
-    </mat-form-field>
-    <mat-form-field appearance="outline">
-      <mat-label>About Restaurant</mat-label>
-      <textarea matInput placeholder="Some Text here"></textarea>
-    </mat-form-field>
-    <mat-form-field appearance="outline">
-      <mat-label>Address</mat-label>
-      <input type="text" matInput placeholder="Placeholder" />
-      <button mat-icon-button matSuffix>
-        <mat-icon>my_location</mat-icon>
-      </button>
-    </mat-form-field>
-    <mat-form-field appearance="outline">
-      <mat-label>Phone</mat-label>
-      <input type="tel" matInput placeholder="Placeholder" />
-      <mat-hint>Include area code</mat-hint>
-    </mat-form-field>
-    <mat-form-field appearance="outline">
-      <mat-label>Email</mat-label>
-      <input type="email" matInput placeholder="Placeholder" />
-    </mat-form-field>
-    <button mat-button>Update</button>
+    <div class="restaurant-menu">
+      <p>Breakfast - Dinner - Lunch - Specials - Beverages - Deals</p>
+    </div>
+    <div class="restaurant-hours">
+      <h3>Opens</h3>
+      <p>12:00 am - 11:59 pm</p>
+      <h3>Delivery Hours</h3>
+      <p><b>Mon - Fri </b> 12:00 am - 11:59 am</p>
+      <p><b>Sat - Sun </b> 12:00 am - 3:00 am</p>
+      <p><b>Delivery Charges: </b> 10.00</p>
+    </div>
   </mat-card>
+  <div class="footer">
+    <p style="text-align:center">
+      <a href="">Contact Us</a>
+      <a href="">Help Center</a>
+    </p>
+  </div>
 </div>

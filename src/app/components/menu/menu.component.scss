@@ -1,13 +1,20 @@
 .manu-tags {
   margin-bottom: 20px;
+  margin-top: 20px;
 }
 
 .menu-items {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
   .menu-item {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    flex: 0 48%;
     margin-bottom: 15px;
+    padding: 0;
+    div {
+      padding: 0 10px;
+    }
     &-block1 {
       flex: 4;
     }
@@ -24,6 +31,23 @@
     &-price {
       margin-top: 8px;
       margin-bottom: 0;
+    }
+    &-image {
+      padding: 0 !important;
+      img {
+        width: 100%;
+      }
+    }
+    &-footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      p {
+        margin: 0;
+      }
+      .mat-icon {
+        font-size: 2rem;
+      }
     }
   }
 }

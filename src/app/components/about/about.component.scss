@@ -1,0 +1,16 @@
+.restaurant {
+  &-about {
+    h3 {
+      margin-bottom: 5px;
+      margin-top: 0;
+    }
+  }
+  &-contact {
+    h3 {
+      margin-bottom: 5px;
+    }
+    .location img {
+      width: 100%;
+    }
+  }
+}

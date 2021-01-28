@@ -23,7 +23,12 @@ import { MatBottomSheetModule } from '@angular/material/bottom-sheet';
 import { AboutComponent } from './components/about/about.component';
 import { HomeComponent } from './components/home/home.component';
 import { MatSelectModule } from '@angular/material/select';
-import { CartComponent } from './components/cart/cart.component';
+import {
+  CartComponent,
+  CartBottomSheet
+} from './components/cart/cart.component';
+import { MatRadioModule } from '@angular/material/radio';
+import { MatCheckboxModule } from '@angular/material/checkbox';
 
 @NgModule({
   declarations: [
@@ -32,7 +37,8 @@ import { CartComponent } from './components/cart/cart.component';
     CartOptions,
     AboutComponent,
     HomeComponent,
-    CartComponent
+    CartComponent,
+    CartBottomSheet
   ],
   imports: [
     BrowserModule,
@@ -53,7 +59,9 @@ import { CartComponent } from './components/cart/cart.component';
     MatMenuModule,
     MatChipsModule,
     MatBottomSheetModule,
-    MatSelectModule
+    MatSelectModule,
+    MatRadioModule,
+    MatCheckboxModule
   ],
   exports: [MatFormFieldModule, MatInputModule],
   providers: [],

@@ -8,6 +8,59 @@
       <p class="cart-options-total">740.00</p>
     </div>
   </div>
+  <hr />
+  <div class="cart-options-additional-items">
+    <h4>
+      <span>Add Soft Drink</span> <span class="tag required">REQUIRED</span>
+    </h4>
+    <small>Select One</small>
+    <mat-radio-group>
+      <mat-radio-button value="Coke"><span>Coke</span></mat-radio-button>
+      <mat-radio-button value="Sprite"><span>Sprite</span></mat-radio-button>
+      <mat-radio-button value="Fanta"><span>Fanta</span></mat-radio-button>
+    </mat-radio-group>
+  </div>
+  <hr />
+  <div class="cart-options-additional-items">
+    <h4>
+      <span>Choose Your Sauces</span>
+      <span class="tag required">1 REQUIRED</span>
+    </h4>
+    <small>Select from 1 up to 3</small>
+    <div class="mat-checkbox-container">
+      <mat-checkbox value="Mayonnais">Mayonnais</mat-checkbox>
+      <mat-checkbox value="Sothwest Chipottle">Sothwest Chipottle</mat-checkbox>
+      <mat-checkbox value="Olive Oil">Olive Oil</mat-checkbox>
+      <mat-checkbox value="Ketchup">Ketchup</mat-checkbox>
+    </div>
+    <button mat-button color="primary">
+      <mat-icon>expand_more</mat-icon> View More (3)
+    </button>
+  </div>
+  <hr />
+  <div class="cart-options-additional-items">
+    <h4>
+      <span>Additional Items</span> <span class="tag optional">OPTIONAL</span>
+    </h4>
+    <small>Optional</small>
+    <div class="mat-checkbox-container">
+      <mat-checkbox value="Beef Pepperoni"
+        ><span>Beef Pepperoni</span><span>+230.00</span></mat-checkbox
+      >
+      <mat-checkbox value="Beef Salami"
+        ><span>Beef Salami</span><span>+250.00</span></mat-checkbox
+      >
+      <mat-checkbox value="Cheese"
+        ><span>Cheese</span><span>+50.00</span></mat-checkbox
+      >
+      <mat-checkbox value="Double Chicken"
+        ><span>Double Chicken</span><span>+300.00</span></mat-checkbox
+      >
+    </div>
+    <button mat-button color="primary">
+      <mat-icon>expand_more</mat-icon> View More (3)
+    </button>
+  </div>
   <mat-form-field appearance="outline">
     <mat-label>Special instructions</mat-label>
     <textarea matInput placeholder="e.g. no mayo"></textarea>

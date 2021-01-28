@@ -9,10 +9,18 @@
   <mat-card>
     <div class="restaurant-header">
       <h2>4th Street Pizza</h2>
-      <div class="rating">
-        <mat-icon color="primary">star</mat-icon>
-        <span><b>3.5</b> / 5.0 (39)</span>
+      <div class="restaurant-details">
+        <div class="rating">
+          <mat-icon color="primary">star</mat-icon>
+          <span><b>3.5</b> / 5.0 (39)</span>
+        </div>
+        <button routerLink="/menu" mat-flat-button color="primary">
+          <mat-icon>local_dining</mat-icon> See Menu
+        </button>
       </div>
+    </div>
+    <div class="restaurant-banner-message">
+      <p>This is a simple placeholder for restaurant banner message</p>
     </div>
     <div class="restaurant-menu">
       <p>Breakfast - Dinner - Lunch - Specials - Beverages - Deals</p>

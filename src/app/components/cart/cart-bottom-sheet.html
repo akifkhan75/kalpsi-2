@@ -1,0 +1,36 @@
+<div class="cart-bottom-sheet">
+  <div class="cart-item">
+    <div>
+      <h4 class="cart-item-title">Egg and Toast</h4>
+      <p class="cart-item-details">Deliciuos egg with toast</p>
+    </div>
+    <div class="cart-item-options">
+      <p class="cart-item-price">750.00</p>
+      <div class="cart-item-counter2">
+        <button
+          *ngIf="isDecrementDisabled == false"
+          color="primary"
+          mat-icon-button
+          (click)="ondecrement()"
+        >
+          <mat-icon>remove</mat-icon>
+        </button>
+        <button
+          *ngIf="isDecrementDisabled == true"
+          color="primary"
+          mat-icon-button
+          (click)="ondecrement()"
+        >
+          <mat-icon>delete</mat-icon>
+        </button>
+        <p>{{ cartCounter }}</p>
+        <button mat-icon-button color="primary" (click)="onIncrement()">
+          <mat-icon>add</mat-icon>
+        </button>
+      </div>
+    </div>
+  </div>
+  <div style="text-align:center;padding:20px;">
+    <button mat-flat-button color="primary">Continue Shopping</button>
+  </div>
+</div>

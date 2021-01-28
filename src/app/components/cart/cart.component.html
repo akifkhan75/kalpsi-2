@@ -11,30 +11,9 @@
         </div>
         <div class="cart-item-options">
           <p class="cart-item-price">750.00</p>
-          <div class="cart-item-counter2">
-            <button
-              *ngIf="isDecrementDisabled == false"
-              color="primary"
-              mat-icon-button
-              (click)="ondecrement()"
-              [disabled]="isDecrementDisabled"
-            >
-              <mat-icon>remove</mat-icon>
-            </button>
-            <button
-              *ngIf="isDecrementDisabled == true"
-              color="primary"
-              mat-icon-button
-              (click)="ondecrement()"
-              [disabled]="isDecrementDisabled"
-            >
-              <mat-icon>delete</mat-icon>
-            </button>
-            <p>{{ cartCounter }}</p>
-            <button mat-icon-button color="primary" (click)="onIncrement()">
-              <mat-icon>add</mat-icon>
-            </button>
-          </div>
+          <button mat-icon-button color="primary" (click)="openBottomSheet()">
+            <mat-icon>edit</mat-icon>
+          </button>
         </div>
       </div>
       <div class="cart-item">
@@ -44,30 +23,9 @@
         </div>
         <div class="cart-item-options">
           <p class="cart-item-price">750.00</p>
-          <div class="cart-item-counter2">
-            <button
-              *ngIf="isDecrementDisabled == false"
-              color="primary"
-              mat-icon-button
-              (click)="ondecrement()"
-              [disabled]="isDecrementDisabled"
-            >
-              <mat-icon>remove</mat-icon>
-            </button>
-            <button
-              *ngIf="isDecrementDisabled == true"
-              color="primary"
-              mat-icon-button
-              (click)="ondecrement()"
-              [disabled]="isDecrementDisabled"
-            >
-              <mat-icon>delete</mat-icon>
-            </button>
-            <p>{{ cartCounter }}</p>
-            <button mat-icon-button color="primary" (click)="onIncrement()">
-              <mat-icon>add</mat-icon>
-            </button>
-          </div>
+          <button mat-icon-button color="primary" (click)="openBottomSheet()">
+            <mat-icon>edit</mat-icon>
+          </button>
         </div>
       </div>
       <div class="cart-item">
@@ -77,30 +35,9 @@
         </div>
         <div class="cart-item-options">
           <p class="cart-item-price">750.00</p>
-          <div class="cart-item-counter2">
-            <button
-              *ngIf="isDecrementDisabled == false"
-              color="primary"
-              mat-icon-button
-              (click)="ondecrement()"
-              [disabled]="isDecrementDisabled"
-            >
-              <mat-icon>remove</mat-icon>
-            </button>
-            <button
-              *ngIf="isDecrementDisabled == true"
-              color="primary"
-              mat-icon-button
-              (click)="ondecrement()"
-              [disabled]="isDecrementDisabled"
-            >
-              <mat-icon>delete</mat-icon>
-            </button>
-            <p>{{ cartCounter }}</p>
-            <button mat-icon-button color="primary" (click)="onIncrement()">
-              <mat-icon>add</mat-icon>
-            </button>
-          </div>
+          <button mat-icon-button color="primary" (click)="openBottomSheet()">
+            <mat-icon>edit</mat-icon>
+          </button>
         </div>
       </div>
     </div>

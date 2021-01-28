@@ -20,6 +20,11 @@
       margin: 0;
       margin-bottom: 7px;
     }
+  }
+  &-details {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     .rating {
       display: flex;
       align-items: center;

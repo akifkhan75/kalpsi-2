@@ -53,8 +53,6 @@
   bottom: 0;
   width: 100%;
   box-sizing: border-box;
-  .mat-flat-button {
-    width: 100%;
-    padding: 10px 0;
-  }
+  display: flex;
+  justify-content: space-between;
 }

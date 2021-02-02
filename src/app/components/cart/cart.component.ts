@@ -3,6 +3,7 @@ import {
   MatBottomSheet,
   MatBottomSheetRef
 } from '@angular/material/bottom-sheet';
+import { FormControl } from '@angular/forms';
 
 @Component({
   selector: 'app-cart',
@@ -46,6 +47,16 @@ export class CartComponent implements OnInit {
 export class CartBottomSheet {
   public cartCounter: number = 1;
   isDecrementDisabled: boolean = true;
+  additionalItems = new FormControl();
+  toppings = new FormControl();
+  toppingList: string[] = [
+    'Extra cheese',
+    'Mushroom',
+    'Onion',
+    'Pepperoni',
+    'Sausage',
+    'Tomato'
+  ];
   constructor(private _bottomSheetRef: MatBottomSheetRef<CartBottomSheet>) {}
 
   openLink(event: MouseEvent): void {

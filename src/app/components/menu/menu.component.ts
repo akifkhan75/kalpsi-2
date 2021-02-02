@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormControl } from '@angular/forms';
 import {
   MatBottomSheet,
   MatBottomSheetRef
@@ -25,6 +26,17 @@ export class MenuComponent implements OnInit {
 export class CartOptions {
   public cartCounter: number = 1;
   isDecrementDisabled: boolean = true;
+
+  additionalItems = new FormControl();
+  toppings = new FormControl();
+  toppingList: string[] = [
+    'Extra cheese',
+    'Mushroom',
+    'Onion',
+    'Pepperoni',
+    'Sausage',
+    'Tomato'
+  ];
 
   constructor(private _bottomSheetRef: MatBottomSheetRef<CartOptions>) {}
 

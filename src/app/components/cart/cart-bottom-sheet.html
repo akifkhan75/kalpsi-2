@@ -1,36 +1,101 @@
-<div class="cart-bottom-sheet">
-  <div class="cart-item">
+<div class="cart-options-container">
+  <div class="cart-options">
     <div>
-      <h4 class="cart-item-title">Egg and Toast</h4>
-      <p class="cart-item-details">Deliciuos egg with toast</p>
+      <h4 class="cart-options-title">Egg and Toast</h4>
+      <p class="cart-options-details">Deliciuos egg with toast</p>
     </div>
-    <div class="cart-item-options">
-      <p class="cart-item-price">750.00</p>
-      <div class="cart-item-counter2">
-        <button
-          *ngIf="isDecrementDisabled == false"
-          color="primary"
-          mat-icon-button
-          (click)="ondecrement()"
-        >
-          <mat-icon>remove</mat-icon>
-        </button>
-        <button
-          *ngIf="isDecrementDisabled == true"
-          color="primary"
-          mat-icon-button
-          (click)="ondecrement()"
-        >
-          <mat-icon>delete</mat-icon>
-        </button>
-        <p>{{ cartCounter }}</p>
-        <button mat-icon-button color="primary" (click)="onIncrement()">
-          <mat-icon>add</mat-icon>
-        </button>
-      </div>
+    <div>
+      <p class="cart-options-total">740.00</p>
     </div>
   </div>
-  <div style="text-align:center;padding:20px;">
-    <button mat-flat-button color="primary">Continue Shopping</button>
+  <hr />
+  <div class="cart-options-additional-items">
+    <h4>
+      <span>Add Soft Drink</span> <span class="tag required">REQUIRED</span>
+    </h4>
+    <small>Select One</small>
+    <mat-form-field appearance="fill">
+      <mat-label>Select</mat-label>
+      <mat-select>
+        <mat-option value="Coke">Coke</mat-option>
+        <mat-option value="Sprite">Sprite</mat-option>
+        <mat-option value="Fanta">Fanta</mat-option>
+      </mat-select>
+    </mat-form-field>
+    <p><span>Coke</span></p>
+  </div>
+  <hr />
+  <div class="cart-options-additional-items">
+    <h4>
+      <span>Choose Your Sauces</span>
+      <span class="tag required">1 REQUIRED</span>
+    </h4>
+    <small>Select from 1 up to 3</small>
+    <mat-form-field appearance="fill">
+      <mat-label>Select</mat-label>
+      <mat-select [formControl]="toppings" multiple>
+        <mat-option *ngFor="let topping of toppingList" [value]="topping">{{
+          topping
+        }}</mat-option>
+      </mat-select>
+    </mat-form-field>
+    <p><span>Extra cheese</span></p>
+  </div>
+  <hr />
+  <div class="cart-options-additional-items">
+    <h4>
+      <span>Additional Items</span> <span class="tag optional">OPTIONAL</span>
+    </h4>
+    <small>Optional</small>
+    <mat-form-field appearance="fill">
+      <mat-label>Select</mat-label>
+      <mat-select [formControl]="additionalItems" multiple>
+        <mat-option
+          ><span>Beef Pepperoni</span>&nbsp;&nbsp;<span
+            >+230.00</span
+          ></mat-option
+        >
+        <mat-option
+          ><span>Beef Salami</span>&nbsp;&nbsp;<span>+250.00</span></mat-option
+        >
+        <mat-option
+          ><span>Cheese</span>&nbsp;&nbsp;<span>+50.00</span></mat-option
+        >
+        <mat-option
+          ><span>Double Chicken</span>&nbsp;&nbsp;<span
+            >+300.00</span
+          ></mat-option
+        >
+      </mat-select>
+    </mat-form-field>
+    <p><span>Beef Pepperoni</span><span>+230.00</span></p>
+    <p><span>Beef Salami</span><span>+250.00</span></p>
+  </div>
+  <mat-form-field appearance="outline">
+    <mat-label>Special instructions</mat-label>
+    <textarea matInput placeholder="e.g. no mayo"></textarea>
+  </mat-form-field>
+  <div class="cart-options-footer">
+    <div class="cart-item-counter">
+      <button
+        mat-icon-button
+        (click)="ondecrement()"
+        [disabled]="isDecrementDisabled"
+      >
+        <mat-icon>remove</mat-icon>
+      </button>
+      <p>{{ cartCounter }}</p>
+      <button mat-icon-button (click)="onIncrement()">
+        <mat-icon>add</mat-icon>
+      </button>
+    </div>
+    <div class="cart-button-container">
+      <button mat-flat-button color="primary" class="add-to-cart-btn">
+        Update
+      </button>
+      <button mat-flat-button color="warn" class="add-to-cart-btn">
+        Cancel
+      </button>
+    </div>
   </div>
 </div>

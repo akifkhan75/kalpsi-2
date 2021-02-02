@@ -29,6 +29,8 @@ import {
 } from './components/cart/cart.component';
 import { MatRadioModule } from '@angular/material/radio';
 import { MatCheckboxModule } from '@angular/material/checkbox';
+import { ProfileComponent } from './components/profile/profile.component';
+import { MatTableModule } from '@angular/material/table';
 
 @NgModule({
   declarations: [
@@ -38,7 +40,8 @@ import { MatCheckboxModule } from '@angular/material/checkbox';
     AboutComponent,
     HomeComponent,
     CartComponent,
-    CartBottomSheet
+    CartBottomSheet,
+    ProfileComponent
   ],
   imports: [
     BrowserModule,
@@ -61,7 +64,8 @@ import { MatCheckboxModule } from '@angular/material/checkbox';
     MatBottomSheetModule,
     MatSelectModule,
     MatRadioModule,
-    MatCheckboxModule
+    MatCheckboxModule,
+    MatTableModule
   ],
   exports: [MatFormFieldModule, MatInputModule],
   providers: [],

@@ -14,11 +14,15 @@
       <span>Add Soft Drink</span> <span class="tag required">REQUIRED</span>
     </h4>
     <small>Select One</small>
-    <mat-radio-group>
-      <mat-radio-button value="Coke"><span>Coke</span></mat-radio-button>
-      <mat-radio-button value="Sprite"><span>Sprite</span></mat-radio-button>
-      <mat-radio-button value="Fanta"><span>Fanta</span></mat-radio-button>
-    </mat-radio-group>
+    <mat-form-field appearance="fill">
+      <mat-label>Select</mat-label>
+      <mat-select>
+        <mat-option value="Coke">Coke</mat-option>
+        <mat-option value="Sprite">Sprite</mat-option>
+        <mat-option value="Fanta">Fanta</mat-option>
+      </mat-select>
+    </mat-form-field>
+    <p><span>Coke</span></p>
   </div>
   <hr />
   <div class="cart-options-additional-items">
@@ -27,15 +31,15 @@
       <span class="tag required">1 REQUIRED</span>
     </h4>
     <small>Select from 1 up to 3</small>
-    <div class="mat-checkbox-container">
-      <mat-checkbox value="Mayonnais">Mayonnais</mat-checkbox>
-      <mat-checkbox value="Sothwest Chipottle">Sothwest Chipottle</mat-checkbox>
-      <mat-checkbox value="Olive Oil">Olive Oil</mat-checkbox>
-      <mat-checkbox value="Ketchup">Ketchup</mat-checkbox>
-    </div>
-    <button mat-button color="primary">
-      <mat-icon>expand_more</mat-icon> View More (3)
-    </button>
+    <mat-form-field appearance="fill">
+      <mat-label>Select</mat-label>
+      <mat-select [formControl]="toppings" multiple>
+        <mat-option *ngFor="let topping of toppingList" [value]="topping">{{
+          topping
+        }}</mat-option>
+      </mat-select>
+    </mat-form-field>
+    <p><span>Extra cheese</span></p>
   </div>
   <hr />
   <div class="cart-options-additional-items">
@@ -43,23 +47,29 @@
       <span>Additional Items</span> <span class="tag optional">OPTIONAL</span>
     </h4>
     <small>Optional</small>
-    <div class="mat-checkbox-container">
-      <mat-checkbox value="Beef Pepperoni"
-        ><span>Beef Pepperoni</span><span>+230.00</span></mat-checkbox
-      >
-      <mat-checkbox value="Beef Salami"
-        ><span>Beef Salami</span><span>+250.00</span></mat-checkbox
-      >
-      <mat-checkbox value="Cheese"
-        ><span>Cheese</span><span>+50.00</span></mat-checkbox
-      >
-      <mat-checkbox value="Double Chicken"
-        ><span>Double Chicken</span><span>+300.00</span></mat-checkbox
-      >
-    </div>
-    <button mat-button color="primary">
-      <mat-icon>expand_more</mat-icon> View More (3)
-    </button>
+    <mat-form-field appearance="fill">
+      <mat-label>Select</mat-label>
+      <mat-select [formControl]="additionalItems" multiple>
+        <mat-option
+          ><span>Beef Pepperoni</span>&nbsp;&nbsp;<span
+            >+230.00</span
+          ></mat-option
+        >
+        <mat-option
+          ><span>Beef Salami</span>&nbsp;&nbsp;<span>+250.00</span></mat-option
+        >
+        <mat-option
+          ><span>Cheese</span>&nbsp;&nbsp;<span>+50.00</span></mat-option
+        >
+        <mat-option
+          ><span>Double Chicken</span>&nbsp;&nbsp;<span
+            >+300.00</span
+          ></mat-option
+        >
+      </mat-select>
+    </mat-form-field>
+    <p><span>Beef Pepperoni</span><span>+230.00</span></p>
+    <p><span>Beef Salami</span><span>+250.00</span></p>
   </div>
   <mat-form-field appearance="outline">
     <mat-label>Special instructions</mat-label>
